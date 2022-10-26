@@ -1,0 +1,20 @@
+@import '../css/colors';
+@import '../css/variables';
+@import '../css/common';
+
+#timezoneselector {
+  @extend %slide-in-panel;
+
+  .zone-list {
+    a {
+      @extend %list-block-link;
+      color: $accent-text;
+
+      span {
+        color: #FFF;
+        padding-right: 4px;
+      }
+    }
+  }
+
+}

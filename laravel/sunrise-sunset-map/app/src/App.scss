@@ -1,0 +1,102 @@
+@import 'css/colors';
+@import 'css/variables';
+
+html {
+  background: $panel-gradient;
+  background-size: cover;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: $panel-gradient;
+  background-size: cover;
+  min-height: 100%;
+  font-family: $body-font;
+  font-size: $body-font-size;
+  color: $primary-text;
+  padding: 0;
+}
+
+a {
+  cursor: pointer;
+  color: $accent-text;
+  text-decoration: none;
+  transition: background, color .25s;
+
+  &:hover,
+  &:active {
+    color: $primary-text;
+  }
+}
+
+
+.clear {
+  display: block;
+  margin: 0;
+  clear: both;
+  width: 100%;
+  font-size: 0;
+  height: 1px;
+  padding: 0;
+}
+
+input,
+select {
+  font-size: 100%;
+}
+
+.slide-in {
+  animation: slide-in .3s forwards;
+  animation-timing-function: ease-out;
+}
+
+.slide-out {
+  animation: slide-out .3s forwards;
+  animation-timing-function: ease-out;
+}
+
+@media(max-width: $width-mobile) {
+  @keyframes slide-in {
+    0% {
+      display: block;
+    }
+
+    100% {
+      transform: translateY(0%);
+    }
+  }
+
+  @keyframes slide-out {
+    0% {
+      transform: translateY(0%);
+    }
+
+    100% {
+      display: none;
+      transform: translateY(100%);
+    }
+  }
+}
+
+@media(min-width: $width-mobile + 1px) {
+  @keyframes slide-in {
+    0% {
+      display: block;
+    }
+
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  @keyframes slide-out {
+    0% {
+      transform: translateX(0%);
+    }
+
+    100% {
+      display: none;
+      transform: translateX(100%);
+    }
+  }
+}
